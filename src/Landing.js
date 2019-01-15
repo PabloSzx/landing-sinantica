@@ -229,6 +229,7 @@ class HomepageLayout extends Component {
                           src={video1}
                           autoPlay
                           repeat
+                          controls
                           onEnded={() =>
                             this.setState({
                               activeIndex: 1,
@@ -245,6 +246,7 @@ class HomepageLayout extends Component {
                           src={video2}
                           autoPlay
                           repeat
+                          controls
                           onEnded={() =>
                             this.setState({
                               activeIndex: 0,
