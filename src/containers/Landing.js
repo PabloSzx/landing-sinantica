@@ -201,6 +201,41 @@ class HomepageLayout extends Component {
             </Grid>
           </Container>
         </Segment>
+        <Segment style={{ padding: "8em 0em" }} vertical>
+          <Container text>
+            <Header as="h3" style={{ fontSize: "5em" }}>
+              Quienes Somos
+            </Header>
+            <p style={{ fontSize: "1.33em" }}>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+            <Button icon labelPosition="right" floated="right">
+              Ver más
+              <Icon name="right arrow" />
+            </Button>
+          </Container>
+        </Segment>
+
+        <img src="./dist/images/logo.png" />
+
+        <Segment style={{ padding: "8em 0em" }} vertical>
+          <Container text>
+            <Header as="h3" style={{ fontSize: "5em" }}>
+              Que Hacemos
+            </Header>
+            <p style={{ fontSize: "1.33em" }}>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+              commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
+              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+            <Button icon labelPosition="right" floated="right">
+              Ver más
+              <Icon name="right arrow" />
+            </Button>
+          </Container>
+        </Segment>
       </ResponsiveContainer>
     );
   }
