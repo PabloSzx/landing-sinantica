@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./containers/Landing";
+import { App } from "./containers";
 import "semantic-ui-css/semantic.min.css";
 
 ReactDOM.render(<App />, document.getElementById("root"));

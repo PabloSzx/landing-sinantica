@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import {
   Button,
   Container,
@@ -36,7 +36,14 @@ class HomepageLayout extends Component {
   render() {
     const { activeIndex } = this.state;
     return (
-      <ResponsiveContainer>
+      <Fragment>
+        <Segment
+          textAlign="center"
+          style={{ minHeight: 700, padding: "1em 0em" }}
+          vertical
+        >
+          <HomepageHeading />
+        </Segment>
         <Segment style={{ padding: "8em 0em" }} vertical>
           <Container text>
             <Header as="h3" style={{ fontSize: "5em" }}>
@@ -151,8 +158,8 @@ class HomepageLayout extends Component {
               </Grid.Row>
             </Grid>
           </Container>
-        </Segment>{" "}
-      </ResponsiveContainer>
+        </Segment>
+      </Fragment>
     );
   }
 }
