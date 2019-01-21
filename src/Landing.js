@@ -13,8 +13,11 @@ import {
   Sidebar,
   Visibility,
   Tab,
+  Image,
+  Dropdown
 } from "semantic-ui-react";
 import logo from "./dist/images/logo.png";
+import logo_up from "./dist/images/logo_up.png";
 import video1 from "./dist/videos/video1.webm";
 import video2 from "./dist/videos/video2.webm";
 // Heads up!
@@ -42,22 +45,20 @@ const HomepageHeading = ({ mobile }) => (
     <Header
       as="h1"
       content="Sinantica"
-      inverted
       style={{
         fontSize: mobile ? "2em" : "4em",
         fontWeight: "normal",
         marginBottom: 0,
-        marginTop: mobile ? "1.5em" : "3em",
+        marginTop: mobile ? "1.5em" : "3em"
       }}
     />
     <Header
       as="h2"
       content="Somos Sinántica. Hacemos cosas sorprendentes."
-      inverted
       style={{
         fontSize: mobile ? "1.5em" : "1.7em",
         fontWeight: "normal",
-        marginTop: mobile ? "0.5em" : "1.5em",
+        marginTop: mobile ? "0.5em" : "1.5em"
       }}
     />
     {/* {<Button primary size="huge">
@@ -83,38 +84,37 @@ class DesktopContainer extends Component {
 
     return (
       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
-        <Visibility
-          once={false}
-          onBottomPassed={this.showFixedMenu}
-          onBottomPassedReverse={this.hideFixedMenu}
+        <Menu fixed="top" pointing={!fixed} secondary={!fixed} size="large">
+          <Container>
+            <Menu.Item>
+              <img src={logo_up} size="large" />
+            </Menu.Item>
+            <Menu.Item header as="a" active>
+              Inicio
+            </Menu.Item>
+            <Menu.Item header as="a">
+              Quienes Somos
+            </Menu.Item>
+            <Menu.Item header as="a">
+              Investigación
+            </Menu.Item>
+            <Menu.Item header as="a">
+              Noticias
+            </Menu.Item>
+            <Menu.Item header as="a">
+              Contacto
+            </Menu.Item>
+            <Menu.Item position="right" />
+          </Container>
+        </Menu>
+
+        <Segment
+          textAlign="center"
+          style={{ minHeight: 700, padding: "1em 0em" }}
+          vertical
         >
-          <Segment
-            inverted
-            textAlign="center"
-            style={{ minHeight: 700, padding: "1em 0em" }}
-            vertical
-          >
-            <Menu
-              fixed={fixed ? "top" : null}
-              inverted={!fixed}
-              pointing={!fixed}
-              secondary={!fixed}
-              size="large"
-            >
-              <Container>
-                <Menu.Item as="a" active>
-                  Home
-                </Menu.Item>
-                <Menu.Item as="a">Quienes Somos</Menu.Item>
-                <Menu.Item as="a">Investigación</Menu.Item>
-                <Menu.Item as="a">Noticias</Menu.Item>
-                <Menu.Item as="a">Contacto</Menu.Item>
-                <Menu.Item position="right" />
-              </Container>
-            </Menu>
-            <HomepageHeading />
-          </Segment>
-        </Visibility>
+          <HomepageHeading />
+        </Segment>
 
         {children}
       </Responsive>
@@ -142,40 +142,29 @@ class MobileContainer extends Component {
         <Sidebar
           as={Menu}
           animation="push"
-          inverted
           onHide={this.handleSidebarHide}
           vertical
           visible={sidebarOpened}
         >
           <Menu.Item as="a" active>
-            Home
+            Inicio
           </Menu.Item>
-          <Menu.Item as="a">Work</Menu.Item>
-          <Menu.Item as="a">Company</Menu.Item>
-          <Menu.Item as="a">Careers</Menu.Item>
-          <Menu.Item as="a">Log in</Menu.Item>
-          <Menu.Item as="a">Sign Up</Menu.Item>
+          <Menu.Item as="a">Quienes Somos</Menu.Item>
+          <Menu.Item as="a">Investigación</Menu.Item>
+          <Menu.Item as="a">Noticias</Menu.Item>
+          <Menu.Item as="a">Contacto</Menu.Item>
         </Sidebar>
 
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment
-            inverted
             textAlign="center"
             style={{ minHeight: 350, padding: "1em 0em" }}
             vertical
           >
             <Container>
-              <Menu inverted pointing secondary size="large">
+              <Menu pointing secondary size="large">
                 <Menu.Item onClick={this.handleToggle}>
                   <Icon name="sidebar" />
-                </Menu.Item>
-                <Menu.Item position="right">
-                  <Button as="a" inverted>
-                    Log in
-                  </Button>
-                  <Button as="a" inverted style={{ marginLeft: "0.5em" }}>
-                    Sign Up
-                  </Button>
                 </Menu.Item>
               </Menu>
             </Container>
@@ -201,13 +190,14 @@ class HomepageLayout extends Component {
     super(props);
 
     this.state = {
-      activeIndex: 0,
+      activeIndex: 0
     };
   }
   render() {
     const { activeIndex } = this.state;
     return (
       <ResponsiveContainer>
+        <Divider />
         <Segment style={{ padding: "8em 0em" }} vertical>
           <Grid container stackable verticalAlign="middle">
             <Grid.Row centered>
@@ -217,7 +207,7 @@ class HomepageLayout extends Component {
                   menu={{ secondary: true, pointing: true }}
                   onTabChange={(event, data) => {
                     this.setState({
-                      activeIndex: data.activeIndex,
+                      activeIndex: data.activeIndex
                     });
                   }}
                   panes={[
@@ -232,11 +222,11 @@ class HomepageLayout extends Component {
                           controls
                           onEnded={() =>
                             this.setState({
-                              activeIndex: 1,
+                              activeIndex: 1
                             })
                           }
                         />
-                      ),
+                      )
                     },
                     {
                       menuItem: "Video2",
@@ -249,12 +239,12 @@ class HomepageLayout extends Component {
                           controls
                           onEnded={() =>
                             this.setState({
-                              activeIndex: 0,
+                              activeIndex: 0
                             })
                           }
                         />
-                      ),
-                    },
+                      )
+                    }
                   ]}
                 />
               </Grid.Column>
@@ -324,13 +314,13 @@ class HomepageLayout extends Component {
           </Container>
         </Segment>
 
-        <Segment inverted vertical style={{ padding: "5em 0em" }}>
+        <Segment vertical style={{ padding: "5em 0em" }}>
           <Container>
-            <Grid divided inverted stackable>
+            <Grid divided stackable>
               <Grid.Row>
                 <Grid.Column width={3}>
-                  <Header inverted as="h4" content="About" />
-                  <List link inverted>
+                  <Header as="h4" content="About" />
+                  <List link>
                     <List.Item as="a">Sitemap</List.Item>
                     <List.Item as="a">Contact Us</List.Item>
                     <List.Item as="a">Religious Ceremonies</List.Item>
@@ -338,8 +328,8 @@ class HomepageLayout extends Component {
                   </List>
                 </Grid.Column>
                 <Grid.Column width={3}>
-                  <Header inverted as="h4" content="Services" />
-                  <List link inverted>
+                  <Header as="h4" content="Services" />
+                  <List link>
                     <List.Item as="a">Banana Pre-Order</List.Item>
                     <List.Item as="a">DNA FAQ</List.Item>
                     <List.Item as="a">How To Access</List.Item>
@@ -347,9 +337,7 @@ class HomepageLayout extends Component {
                   </List>
                 </Grid.Column>
                 <Grid.Column width={7}>
-                  <Header as="h4" inverted>
-                    Footer Header
-                  </Header>
+                  <Header as="h4">Footer Header</Header>
                   <p>
                     Extra space for a call to action inside the footer that
                     could help re-engage users.
