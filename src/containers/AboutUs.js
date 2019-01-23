@@ -5,7 +5,7 @@ export default class AboutUs extends Component {
     return (
       <Container>
         <Label>
-          <Icon name="mail" /> 23
+          <Icon name="mail" /> 22
         </Label>
       </Container>
     );
