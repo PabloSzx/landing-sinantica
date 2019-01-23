@@ -93,7 +93,6 @@ export default class DesktopContainer extends Component {
             <Menu.Item position="right" />
           </Container>
         </Menu>
-
         {children}
       </Responsive>
     );

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { DesktopContainer } from "../components";
+import { ResponsiveContainer } from "../components";
 import { Landing, News, AboutUs } from "./";
 import { Container, Label, Icon } from "semantic-ui-react";
 class Who extends Component {
@@ -25,13 +25,13 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <DesktopContainer>
+          <ResponsiveContainer>
             <Route exact path="/" component={Landing} />
             <Route exact path="/quienes_somos" component={AboutUs} />
             <Route exact path="/investigacion" component={Inv} />
             <Route exact path="/noticias" component={News} />
             <Route exact path="/contacto" component={Who} />
-          </DesktopContainer>
+          </ResponsiveContainer>
         </Switch>
       </BrowserRouter>
     );

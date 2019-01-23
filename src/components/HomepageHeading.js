@@ -30,45 +30,54 @@ class HomepageHeading extends Component {
   render() {
     const { initialPose, pose } = this.state;
     return (
-      <Container text>
-        <div>
-          <Img
-            src={sample}
-            initialPose={initialPose}
-            pose={pose}
-            onPoseComplete={() =>
-              this.setState({ initialPose: pose, pose: initialPose })
-            }
-            style={{
-              zIndex: "-1",
-              position: "absolute",
-              top: "0px",
-              left: "0px",
-              height: "92.8vh"
-            }}
-          />
-          <Header
-            as="h1"
-            content="Sinantica"
-            style={{
-              fontSize: "4em",
-              fontWeight: "normal",
-              marginBottom: 0,
-              marginTop: "3em"
-            }}
-          />
+      <div
+        style={{
+          height: "100vh",
+          position: "relative",
+          top: "0px",
+          marginTop: 0
+        }}
+      >
+        <Img
+          src={sample}
+          initialPose={initialPose}
+          pose={pose}
+          onPoseComplete={() =>
+            this.setState({ initialPose: pose, pose: initialPose })
+          }
+          style={{
+            zIndex: "-1",
+            position: "absolute",
+            top: "0px",
+            left: "0px",
+            height: "100vh",
+            marginTop: 0
+          }}
+        />
+        <Header
+          as="h1"
+          content="Sinantica"
+          style={{
+            position: "relative",
+            fontSize: "4em",
+            fontWeight: "normal",
+            marginBottom: 0,
+            marginTop: 0,
+            paddingTop: "4em"
+          }}
+        />
 
-          <Header
-            as="h2"
-            content="Somos Sinántica. Hacemos cosas sorprendentes."
-            style={{
-              fontSize: "1.5em",
-              fontWeight: "normal",
-              marginTop: "1.5em"
-            }}
-          />
-        </div>
-      </Container>
+        <Header
+          as="h2"
+          content="Somos Sinántica. Hacemos cosas sorprendentes."
+          style={{
+            position: "relative",
+            fontSize: "1.5em",
+            fontWeight: "normal",
+            marginTop: "1.5em"
+          }}
+        />
+      </div>
     );
   }
 }

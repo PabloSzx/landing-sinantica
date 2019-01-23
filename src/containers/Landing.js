@@ -37,11 +37,7 @@ class HomepageLayout extends Component {
     const { activeIndex } = this.state;
     return (
       <Fragment>
-        <Segment
-          textAlign="center"
-          style={{ minHeight: 700, padding: "1em 0em" }}
-          vertical
-        >
+        <Segment textAlign="center" style={{ padding: "0.1em 0em" }} vertical>
           <HomepageHeading />
         </Segment>
         <Segment style={{ padding: "8em 0em" }} vertical>

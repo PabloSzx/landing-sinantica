@@ -42,6 +42,9 @@ export default class MobileContainer extends Component {
           onHide={this.handleSidebarHide}
           vertical
           visible={sidebarOpened}
+          style={{
+            marginBottom: 0
+          }}
         >
           <Menu.Item as="a" active>
             Inicio
@@ -55,8 +58,11 @@ export default class MobileContainer extends Component {
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment
             textAlign="center"
-            style={{ minHeight: 350, padding: "1em 0em" }}
             vertical
+            style={{
+              margin: 0,
+              padding: "0.1em"
+            }}
           >
             <Container>
               <Menu pointing secondary size="large">
@@ -65,7 +71,6 @@ export default class MobileContainer extends Component {
                 </Menu.Item>
               </Menu>
             </Container>
-            <HomepageHeading mobile />
           </Segment>
 
           {children}
