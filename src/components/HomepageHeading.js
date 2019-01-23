@@ -1,21 +1,5 @@
 import React, { Component } from "react";
-import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  List,
-  Menu,
-  Responsive,
-  Segment,
-  Sidebar,
-  Visibility,
-  Tab,
-  Image,
-  Dropdown
-} from "semantic-ui-react";
+import { Container, Header } from "semantic-ui-react";
 import sample from "../dist/images/google.png";
 import posed from "react-pose";
 
@@ -47,33 +31,43 @@ class HomepageHeading extends Component {
     const { initialPose, pose } = this.state;
     return (
       <Container text>
-        <Header
-          as="h1"
-          content="Sinantica"
-          style={{
-            fontSize: "4em",
-            fontWeight: "normal",
-            marginBottom: 0,
-            marginTop: "3em"
-          }}
-        />
-        <Img
-          src={sample}
-          initialPose={initialPose}
-          pose={pose}
-          onPoseComplete={() =>
-            this.setState({ initialPose: pose, pose: initialPose })
-          }
-        />
-        <Header
-          as="h2"
-          content="Somos Sinántica. Hacemos cosas sorprendentes."
-          style={{
-            fontSize: "1.5em",
-            fontWeight: "normal",
-            marginTop: "1.5em"
-          }}
-        />
+        <div>
+          <Img
+            src={sample}
+            initialPose={initialPose}
+            pose={pose}
+            onPoseComplete={() =>
+              this.setState({ initialPose: pose, pose: initialPose })
+            }
+            style={{
+              zIndex: "-1",
+              position: "absolute",
+              top: "0px",
+              left: "0px",
+              height: "92.8vh"
+            }}
+          />
+          <Header
+            as="h1"
+            content="Sinantica"
+            style={{
+              fontSize: "4em",
+              fontWeight: "normal",
+              marginBottom: 0,
+              marginTop: "3em"
+            }}
+          />
+
+          <Header
+            as="h2"
+            content="Somos Sinántica. Hacemos cosas sorprendentes."
+            style={{
+              fontSize: "1.5em",
+              fontWeight: "normal",
+              marginTop: "1.5em"
+            }}
+          />
+        </div>
       </Container>
     );
   }
