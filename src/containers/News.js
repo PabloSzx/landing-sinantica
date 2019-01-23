@@ -1,8 +1,10 @@
+import axios from "axios";
+
 import { reduce } from "lodash";
 import React, { Component, Fragment } from "react";
 import Markdown from "react-remarkable";
 import { Divider, Header, Icon, Segment } from "semantic-ui-react";
-import lorem from "../dist/text/lorem.md";
+
 export default class News extends Component {
   constructor(props) {
     super(props);
@@ -13,10 +15,9 @@ export default class News extends Component {
   }
 
   async componentDidMount() {
-    for (let i = 0; i < 10; i++)
-      fetch(lorem)
-        .then(response => response.text())
-        .then(text => this.setState({ news: this.state.news.concat(text) }));
+    const news = await axios.get("/blog");
+    console.log("news", news);
+    this.setState({ news: news.data });
   }
 
   render() {
@@ -28,12 +29,12 @@ export default class News extends Component {
           news,
           (acum, value, key) => {
             const Row = (
-              <Fragment>
-                <Markdown>{value}</Markdown>
+              <Fragment key={key}>
+                <Markdown>{value.markdown}</Markdown>
                 <Divider horizontal>
                   <Header as="h4">
                     <Icon name="bar chart" />
-                    Specifications
+                    {value._id}
                   </Header>
                 </Divider>
               </Fragment>
