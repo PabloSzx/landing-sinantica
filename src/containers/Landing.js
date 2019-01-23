@@ -42,7 +42,7 @@ class HomepageLayout extends Component {
         </Segment>
         <Segment style={{ padding: "8em 0em" }} vertical>
           <Container text>
-            <Header as="h3" style={{ fontSize: "5em" }}>
+            <Header as="h3" className="title-font" style={{ fontSize: "5em" }}>
               Quienes Somos
             </Header>
             <p style={{ fontSize: "1.33em" }}>
@@ -61,7 +61,7 @@ class HomepageLayout extends Component {
         </Segment>
         <Segment style={{ padding: "8em 0em" }} vertical>
           <Container text>
-            <Header as="h3" style={{ fontSize: "5em" }}>
+            <Header as="h3" className="title-font" style={{ fontSize: "5em" }}>
               Que Hacemos
             </Header>
             <p style={{ fontSize: "1.33em" }}>
@@ -78,7 +78,7 @@ class HomepageLayout extends Component {
         <Segment vertical>
           <Grid>
             <Grid.Row centered>
-              <Header as="h2" textAlign="center">
+              <Header as="h2" className="title-font" textAlign="center">
                 <Header.Content>TRABAJAMOS CON</Header.Content>
               </Header>
             </Grid.Row>
@@ -98,7 +98,7 @@ class HomepageLayout extends Component {
               </Grid.Column>
             </Grid.Row>
             <Grid.Row centered>
-              <Header as="h2" textAlign="center">
+              <Header as="h2" className="title-font" textAlign="center">
                 <Header.Content>CON EL PATROCINIO</Header.Content>
               </Header>
             </Grid.Row>
@@ -126,7 +126,7 @@ class HomepageLayout extends Component {
                   <SampleImage />
                 </Grid.Column>
                 <Grid.Column width={4}>
-                  <Header as="h4" content="Contacto" />
+                  <Header as="h4" className="title-font" content="Contacto" />
                   <List link>
                     <List.Item as="a">General Lagos 2086 Ed. 3000</List.Item>
                     <List.Item as="a">Tel: 800600310</List.Item>
@@ -135,7 +135,11 @@ class HomepageLayout extends Component {
                   </List>
                 </Grid.Column>
                 <Grid.Column width={4}>
-                  <Header as="h4" content="Redes Sociales" />
+                  <Header
+                    as="h4"
+                    className="title-font"
+                    content="Redes Sociales"
+                  />
                   <List link>
                     <List.Item as="a">
                       <Icon name="facebook" />

@@ -5,13 +5,13 @@ import posed from "react-pose";
 
 const Img = posed.img({
   nada: {
-    filter: "blur(0px)",
+    filter: "blur(1px)",
     transition: {
       duration: 2500
     }
   },
   harto: {
-    filter: "blur(10px)",
+    filter: "blur(7px)",
     transition: {
       duration: 2500
     }
@@ -55,15 +55,16 @@ class HomepageHeading extends Component {
           }}
         />
         <Header
+          className="title-font"
           as="h1"
           content="Sinantica"
           style={{
             position: "relative",
-            fontSize: "4em",
+            fontSize: "8em",
             fontWeight: "normal",
             marginBottom: 0,
             marginTop: 0,
-            paddingTop: "4em"
+            paddingTop: "2.5em"
           }}
         />
 
