@@ -1,13 +1,6 @@
 import React, { Component, Fragment } from "react";
 import styled from "styled-components";
-import {
-  Button,
-  Container,
-  Grid,
-  Icon,
-  List,
-  Segment
-} from "semantic-ui-react";
+import { Segment } from "semantic-ui-react";
 import sample from "../dist/images/google.png";
 import { Footer } from "../components";
 const DIV = styled.div`
@@ -43,7 +36,7 @@ const P = styled.p`
   color: black;
 `;
 
-export default class AboutUs extends Component {
+export default class Investigation extends Component {
   render() {
     return (
       <Fragment>
@@ -80,22 +73,7 @@ export default class AboutUs extends Component {
             />
           </div>
         </Segment>
-        <Segment style={{ padding: "8em 0em" }} vertical>
-          <Container text>
-            <Header as="h3" className="title-font" style={{ fontSize: "5em" }}>
-              Quienes Somos
-            </Header>
-            <p style={{ fontSize: "1.33em" }}>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </p>
-            <Button icon labelPosition="right" floated="right">
-              Ver más
-              <Icon name="right arrow" />
-            </Button>
-          </Container>
-        </Segment>
+
         <Footer />
       </Fragment>
     );

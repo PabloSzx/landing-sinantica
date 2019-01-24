@@ -4,13 +4,13 @@ import { reduce } from "lodash";
 import React, { Component, Fragment } from "react";
 import Markdown from "react-remarkable";
 import { Divider, Header, Icon, Segment } from "semantic-ui-react";
-
+import { Footer } from "../components";
 export default class News extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      news: [],
+      news: []
     };
   }
 
@@ -44,6 +44,7 @@ export default class News extends Component {
           },
           []
         )}
+        <Footer />
       </Fragment>
     );
   }
