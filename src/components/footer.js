@@ -14,7 +14,7 @@ class Footer extends Component {
     return (
       <Segment vertical style={{ padding: "5em 0em" }} id="contacto">
         <Container>
-          <Grid divided stackable>
+          <Grid divided stackable centered>
             <Grid.Row>
               <Grid.Column width={4}>
                 <img src={logo_big} />

@@ -50,9 +50,9 @@ export default class Investigation extends Component {
             }}
           >
             <DIV>
-              <Title>QUIENES SOMOS</Title>
+              <Title>INVESTIGACION</Title>
               <Header className="title-font">
-                Jovenes bacanes que hacen cosas bacanes
+                Investigamos como rastrear autitos
               </Header>
               <P>
                 Aplicamos machine learnin y tecnicas avanzadas de no se que para
