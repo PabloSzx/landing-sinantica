@@ -1,7 +1,16 @@
 import React, { Component } from "react";
-import { Container, Label, Icon, Header, Card } from "semantic-ui-react";
+import styled from "styled-components";
+
 import sample from "../dist/images/google.png";
-import { relative } from "path";
+
+const DIV = styled.div`
+  position: relative;
+  background-color: red;
+  height: 38rem;
+  width: 65rem;
+  top: 10.5em;
+  left: 10rem;
+`;
 export default class AboutUs extends Component {
   render() {
     return (
@@ -10,19 +19,10 @@ export default class AboutUs extends Component {
           height: "100vh",
           position: "relative",
           top: "0px",
-          marginTop: 0
+          marginTop: 0,
         }}
       >
-        <div
-          style={{
-            position: "relative",
-            backgroundColor: "white",
-            height: "30vh",
-            width: "30vw",
-            top: "800 px",
-            left: "500 px"
-          }}
-        />
+        <DIV />
 
         <img
           src={sample}
@@ -32,7 +32,7 @@ export default class AboutUs extends Component {
             top: "0px",
             left: "0px",
             height: "100vh",
-            marginTop: 0
+            marginTop: 0,
           }}
         />
 

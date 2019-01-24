@@ -2,41 +2,27 @@ import React, { Component, Fragment } from "react";
 import {
   Button,
   Container,
-  Divider,
   Grid,
   Header,
   Icon,
   List,
-  Menu,
-  Responsive,
   Segment,
-  Sidebar,
-  Visibility,
-  Tab,
   Image,
-  Dropdown
 } from "semantic-ui-react";
-import {
-  DesktopContainer,
-  MobileContainer,
-  HomepageHeading,
-  ResponsiveContainer,
-  SampleImage,
-  ScrollImage
-} from "../components";
+import { HomepageHeading, ScrollImage } from "../components";
 
+import logo_big from "../dist/images/logo_sinantica_bulge_blur.png";
 import fci from "../dist/images/logo-facultad.png";
 import innoving from "../dist/images/logo-innoving.jpg";
 import leufulab from "../dist/images/logo-leufulab.png";
 import smu from "../dist/images/smu-logo.png";
-import logo_big from "../dist/images/logo-big.png";
 
 class HomepageLayout extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      activeIndex: 0
+      activeIndex: 0,
     };
   }
   render() {
