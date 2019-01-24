@@ -19,6 +19,8 @@ import {
 import { Link } from "react-router-dom";
 import { HomepageHeading, SampleImage } from "./";
 import { getWidth } from "../utils";
+import logo_small from "../dist/images/logo-small.png";
+
 export default class DesktopContainer extends Component {
   state = {
     active: "inicio"
@@ -42,7 +44,7 @@ export default class DesktopContainer extends Component {
         >
           <Container>
             <Menu.Item>
-              <SampleImage size="mini" />
+              <img src={logo_small} size="mini" />
             </Menu.Item>
             <Menu.Item
               header

@@ -25,6 +25,12 @@ import {
   ScrollImage
 } from "../components";
 
+import fci from "../dist/images/logo-facultad.png";
+import innoving from "../dist/images/logo-innoving.jpg";
+import leufulab from "../dist/images/logo-leufulab.png";
+import smu from "../dist/images/smu-logo.png";
+import logo_big from "../dist/images/logo-big.png";
+
 class HomepageLayout extends Component {
   constructor(props) {
     super(props);
@@ -82,10 +88,9 @@ class HomepageLayout extends Component {
                 <Header.Content>TRABAJAMOS CON</Header.Content>
               </Header>
             </Grid.Row>
-
-            <Grid.Row centered columns={12}>
+            <Grid.Row centered columns={8}>
               <Grid.Column>
-                <Image src="https://react.semantic-ui.com/images/wireframe/image.png" />
+                <Image src={smu} />
               </Grid.Column>
               <Grid.Column>
                 <Image src="https://react.semantic-ui.com/images/wireframe/image.png" />
@@ -102,18 +107,23 @@ class HomepageLayout extends Component {
                 <Header.Content>CON EL PATROCINIO</Header.Content>
               </Header>
             </Grid.Row>
-            <Grid.Row centered columns={12}>
+
+            <Grid.Row centered columns={8}>
               <Grid.Column>
-                <Image src="https://react.semantic-ui.com/images/wireframe/image.png" />
+                <Image src={fci} />
               </Grid.Column>
               <Grid.Column>
-                <Image src="https://react.semantic-ui.com/images/wireframe/image.png" />
+                <Image src={innoving} />
               </Grid.Column>
               <Grid.Column>
-                <Image src="https://react.semantic-ui.com/images/wireframe/image.png" />
+                <Image src={leufulab} />
               </Grid.Column>
               <Grid.Column>
-                <Image src="https://react.semantic-ui.com/images/wireframe/image.png" />
+                <Image
+                  src={
+                    "https://react.semantic-ui.com/images/wireframe/image.png"
+                  }
+                />
               </Grid.Column>
             </Grid.Row>
           </Grid>
@@ -123,7 +133,7 @@ class HomepageLayout extends Component {
             <Grid divided stackable>
               <Grid.Row>
                 <Grid.Column width={4}>
-                  <SampleImage />
+                  <img src={logo_big} />
                 </Grid.Column>
                 <Grid.Column width={4}>
                   <Header as="h4" className="title-font" content="Contacto" />
