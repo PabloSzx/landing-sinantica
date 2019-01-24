@@ -9,14 +9,12 @@ const Img = posed.img({
     transition: {
       duration: 350,
     },
-    transform: ({ difx, dify }) => `rotate3d(${difx}, ${dify}, 0, 10deg)`,
   },
   harto: {
     filter: "blur(3px)",
     transition: {
-      duration: 500,
+      duration: 1500,
     },
-    transform: ({ difx, dify }) => `rotate3d(${difx}, ${dify}, 0, 10deg)`,
   },
 });
 class HomepageHeading extends Component {
@@ -26,14 +24,11 @@ class HomepageHeading extends Component {
     this.state = {
       initialPose: "nada",
       pose: "harto",
-      difx: 0,
-      dify: 0,
     };
-    this.timeout = null;
   }
 
   render() {
-    const { initialPose, pose, difx, dify } = this.state;
+    const { initialPose, pose } = this.state;
 
     return (
       <div
@@ -46,28 +41,19 @@ class HomepageHeading extends Component {
         ref={e => {
           this.div = e;
         }}
-        onMouseMove={e => {
-          // console.log("e", this.div.clientWidth);
-
-          // console.log("e", this.div.clientHeight);
-          // console.log("x: ", e.pageX, " y: ", e.pageY);
-          clearTimeout(this.timeout);
+        onMouseEnter={e => {
           this.setState({
-            initialPose: "nada",
-            pose: "harto",
-            difx: e.pageX / this.div.clientWidth,
-            dify: e.pageY / this.div.clientHeight,
+            initialPose: "harto",
+            pose: "nada",
           });
-
-          this.timeout = setTimeout(() => {
-            this.setState({
-              initialPose: "harto",
-              pose: "nada",
-            });
-          }, 100);
+        }}
+        onMouseMove={e => {
+          this.setState({
+            initialPose: "harto",
+            pose: "nada",
+          });
         }}
         onMouseOut={e => {
-          clearTimeout(this.timeout);
           this.setState({
             initialPose: "nada",
             pose: "harto",
@@ -78,11 +64,6 @@ class HomepageHeading extends Component {
           src={sample}
           initialPose={initialPose}
           pose={pose}
-          // onPoseComplete={() =>
-          //   this.setState({ initialPose: pose, pose: initialPose })
-          // }
-          difx={difx}
-          dify={dify}
           style={{
             zIndex: "-1",
             position: "absolute",
