@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { ResponsiveContainer } from "../components";
 import { Landing, News, AboutUs, Investigation } from "./";
-import { Container, Label, Icon } from "semantic-ui-react";
 class Who extends Component {
   render() {
     return <div>xd</div>;

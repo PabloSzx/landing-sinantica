@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 import {
   Container,
   Icon,
@@ -16,8 +17,8 @@ export default withRouter(
       super(props);
 
       this.state = {
-        active: this.props.location.pathname.slice(1),
         sidebarOpened: false,
+        ruta: "/",
       };
     }
 
@@ -25,9 +26,17 @@ export default withRouter(
 
     handleToggle = () => this.setState({ sidebarOpened: true });
 
+    componentDidUpdate(prevProps, prevState) {
+      if (prevProps.location.pathname !== this.props.location.pathname) {
+        this.setState({
+          ruta: this.props.location.pathname,
+        });
+      }
+    }
+
     render() {
       const { children } = this.props;
-      const { sidebarOpened, active } = this.state;
+      const { sidebarOpened, ruta } = this.state;
 
       return (
         <Responsive
@@ -46,52 +55,43 @@ export default withRouter(
             }}
           >
             <Menu.Item
-              as={Link}
-              to="/"
-              active={active === ""}
-              onClick={() =>
-                this.setState({ active: "", sidebarOpened: false })
-              }
+              as={NavLink}
+              to={"/#home"}
+              smooth
+              active={ruta === "/"}
+              onClick={() => this.setState({ sidebarOpened: false })}
             >
               Inicio
             </Menu.Item>
             <Menu.Item
               as={Link}
               to="/quienes_somos"
-              active={active === "quienes_somos"}
-              onClick={() =>
-                this.setState({ active: "quienes_somos", sidebarOpened: false })
-              }
+              active={ruta === "/quienes_somos"}
+              onClick={() => this.setState({ sidebarOpened: false })}
             >
               Quienes Somos
             </Menu.Item>
             <Menu.Item
               as={Link}
               to="/investigacion"
-              active={active === "investigacion"}
-              onClick={() =>
-                this.setState({ active: "investigacion", sidebarOpened: false })
-              }
+              active={ruta === "/investigacion"}
+              onClick={() => this.setState({ sidebarOpened: false })}
             >
               Investigación
             </Menu.Item>
             <Menu.Item
               as={Link}
               to="/noticias"
-              active={active === "noticias"}
-              onClick={() =>
-                this.setState({ active: "noticias", sidebarOpened: false })
-              }
+              active={ruta === "/noticias"}
+              onClick={() => this.setState({ sidebarOpened: false })}
             >
               Noticias
             </Menu.Item>
             <Menu.Item
-              as={Link}
-              to="/contacto"
-              active={active === "contacto"}
-              onClick={() =>
-                this.setState({ active: "contacto", sidebarOpened: false })
-              }
+              as={NavLink}
+              to={`${ruta}#contacto`}
+              smooth
+              onClick={() => this.setState({ sidebarOpened: false })}
             >
               Contacto
             </Menu.Item>

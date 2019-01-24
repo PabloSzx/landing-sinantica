@@ -12,7 +12,7 @@ import logo_big from "../dist/images/logo_sinantica_bulge_blur.png";
 class Footer extends Component {
   render() {
     return (
-      <Segment vertical style={{ padding: "5em 0em" }}>
+      <Segment vertical style={{ padding: "5em 0em" }} id="contacto">
         <Container>
           <Grid divided stackable>
             <Grid.Row>

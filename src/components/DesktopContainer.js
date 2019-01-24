@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
+import { NavHashLink as NavLink } from "react-router-hash-link";
 import { Container, Menu, Responsive } from "semantic-ui-react";
 import logo_small from "../dist/images/logo-small.png";
 import { getWidth } from "../utils";
@@ -10,17 +11,25 @@ export default withRouter(
       super(props);
 
       this.state = {
-        active: this.props.location.pathname.slice(1),
+        fixed: false,
+        ruta: "/",
       };
     }
 
     hideFixedMenu = () => this.setState({ fixed: false });
     showFixedMenu = () => this.setState({ fixed: true });
 
+    componentDidUpdate(prevProps, prevState) {
+      if (prevProps.location.pathname !== this.props.location.pathname) {
+        this.setState({
+          ruta: this.props.location.pathname,
+        });
+      }
+    }
+
     render() {
       const { children } = this.props;
-      const { fixed, active } = this.state;
-
+      const { fixed, ruta } = this.state;
       return (
         <Responsive
           getWidth={getWidth}
@@ -39,10 +48,10 @@ export default withRouter(
               </Menu.Item>
               <Menu.Item
                 header
-                as={Link}
-                to="/"
-                active={active === ""}
-                onClick={() => this.setState({ active: "" })}
+                smooth
+                as={NavLink}
+                to={"/#home"}
+                active={ruta === "/"}
               >
                 Inicio
               </Menu.Item>
@@ -50,8 +59,7 @@ export default withRouter(
                 header
                 as={Link}
                 to="/quienes_somos"
-                active={active === "quienes_somos"}
-                onClick={() => this.setState({ active: "quienes_somos" })}
+                active={ruta === "/quienes_somos"}
               >
                 Quienes Somos
               </Menu.Item>
@@ -60,8 +68,7 @@ export default withRouter(
                 header
                 as={Link}
                 to="/investigacion"
-                active={active === "investigacion"}
-                onClick={() => this.setState({ active: "investigacion" })}
+                active={ruta === "/investigacion"}
               >
                 Investigación
               </Menu.Item>
@@ -69,18 +76,11 @@ export default withRouter(
                 header
                 as={Link}
                 to="/noticias"
-                active={active === "noticias"}
-                onClick={() => this.setState({ active: "noticias" })}
+                active={ruta === "/noticias"}
               >
                 Noticias
               </Menu.Item>
-              <Menu.Item
-                header
-                as={Link}
-                to="/contacto"
-                active={active === "contacto"}
-                onClick={() => this.setState({ active: "contacto" })}
-              >
+              <Menu.Item header smooth as={NavLink} to={`${ruta}#contacto`}>
                 Contacto
               </Menu.Item>
               <Menu.Item position="right" />

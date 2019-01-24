@@ -5,12 +5,10 @@ import {
   Grid,
   Header,
   Icon,
-  List,
   Segment,
-  Image
+  Image,
 } from "semantic-ui-react";
 import { HomepageHeading, ScrollImage, Footer } from "../components";
-import logo_big from "../dist/images/logo_sinantica_bulge_blur.png";
 import fci from "../dist/images/logo-facultad.png";
 import innoving from "../dist/images/logo-innoving.jpg";
 import leufulab from "../dist/images/logo-leufulab.png";
@@ -21,14 +19,19 @@ class HomepageLayout extends Component {
     super(props);
 
     this.state = {
-      activeIndex: 0
+      activeIndex: 0,
     };
   }
   render() {
     const { activeIndex } = this.state;
     return (
       <Fragment>
-        <Segment textAlign="center" style={{ padding: "0.1em 0em" }} vertical>
+        <Segment
+          textAlign="center"
+          style={{ padding: "0.1em 0em" }}
+          vertical
+          id="home"
+        >
           <HomepageHeading />
         </Segment>
         <Segment style={{ padding: "8em 0em" }} vertical>
