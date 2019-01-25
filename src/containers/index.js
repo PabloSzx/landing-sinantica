@@ -1,6 +1,6 @@
 import App from "./App";
 import Landing from "./Landing";
-import News from "./News";
+import News from "./NewsDesing";
 import AboutUs from "./AboutUs";
 import Investigation from "./Investigation";
 

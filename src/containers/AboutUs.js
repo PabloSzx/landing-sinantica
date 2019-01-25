@@ -1,13 +1,6 @@
 import React, { Component, Fragment } from "react";
 import styled from "styled-components";
-import {
-  Button,
-  Container,
-  Grid,
-  Icon,
-  List,
-  Segment
-} from "semantic-ui-react";
+import { Container, Segment } from "semantic-ui-react";
 import sample from "../dist/images/google.png";
 import example from "../dist/images/sample.png";
 import { Footer } from "../components";
@@ -33,7 +26,6 @@ const DIVBox = styled.div`
 
 const DIVImage = styled.div`
   position: absolute;
-  backgroundcolor: red;
   maxheight: 50vh;
   width: 50vw;
   top: 10vh;

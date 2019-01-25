@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:600");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Raleway|Montserrat|Open+Sans");
 
 *:not(.icon) {
   font-family: "Montserrat", sans-serif !important;
@@ -10,4 +10,7 @@
 
 .title-font {
   font-family: "Open Sans", sans-serif !important;
+}
+.title-notice {
+  font-family: "Playfair Display", sans-serif !important;
 }
