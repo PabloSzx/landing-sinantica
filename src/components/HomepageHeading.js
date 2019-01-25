@@ -83,7 +83,14 @@ class HomepageHeading extends Component {
           muted={true}
           autoPlay={true}
           loop={true}
-          style={{ width: "100vw", height: "100vh", zIndex: "-1" }}
+          style={{
+            width: "100vw",
+            height: "100vh",
+            zIndex: "-2",
+            left: 0,
+            top: 0,
+            position: "absolute",
+          }}
         />
         {/*
           <ReactPlayer
