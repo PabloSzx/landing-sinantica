@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import styled from "styled-components";
 import { Segment } from "semantic-ui-react";
 import sample from "../dist/images/google.png";
-import { Footer } from "../components";
+import { Footer, ButtonTop } from "../components";
 const DIV = styled.div`
   position: relative;
   background-color: white;
@@ -73,7 +73,7 @@ export default class Investigation extends Component {
             />
           </div>
         </Segment>
-
+        <ButtonTop />
         <Footer />
       </Fragment>
     );

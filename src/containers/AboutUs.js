@@ -3,8 +3,7 @@ import styled from "styled-components";
 import { Container, Segment } from "semantic-ui-react";
 import sample from "../dist/images/google.png";
 import example from "../dist/images/sample.png";
-import { Footer } from "../components";
-import { relative } from "path";
+import { Footer, ButtonTop } from "../components";
 const DIV = styled.div`
   position: relative;
   background-color: white;
@@ -247,7 +246,7 @@ export default class AboutUs extends Component {
             </p>
           </Container>
         </Segment>
-
+        <ButtonTop />
         <Footer />
       </Fragment>
     );

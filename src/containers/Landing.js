@@ -6,9 +6,9 @@ import {
   Header,
   Icon,
   Segment,
-  Image,
+  Image
 } from "semantic-ui-react";
-import { HomepageHeading, ScrollImage, Footer } from "../components";
+import { HomepageHeading, ScrollImage, Footer, ButtonTop } from "../components";
 import fci from "../dist/images/logo-facultad.png";
 import innoving from "../dist/images/logo-innoving.jpg";
 import leufulab from "../dist/images/logo-leufulab.png";
@@ -19,7 +19,7 @@ class HomepageLayout extends Component {
     super(props);
 
     this.state = {
-      activeIndex: 0,
+      activeIndex: 0
     };
   }
   render() {
@@ -116,6 +116,7 @@ class HomepageLayout extends Component {
             </Grid.Row>
           </Grid>
         </Segment>
+        <ButtonTop />
         <Footer />
       </Fragment>
     );

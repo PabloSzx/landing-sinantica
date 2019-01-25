@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import styled from "styled-components";
 import { Segment, Header, Grid, Item, Divider, Icon } from "semantic-ui-react";
 import sample from "../dist/images/google.png";
-import { Footer } from "../components";
+import { Footer, ButtonTop } from "../components";
 
 const DIV = styled.div`
   top: -0.35em;
@@ -11,7 +11,6 @@ const DIV = styled.div`
   background-color: white;
   height: 15em;
 `;
-
 export default class Investigation extends Component {
   render() {
     return (
@@ -168,7 +167,7 @@ export default class Investigation extends Component {
             </Grid.Row>
           </Grid>
         </Segment>
-
+        <ButtonTop />
         <Footer />
       </Fragment>
     );
