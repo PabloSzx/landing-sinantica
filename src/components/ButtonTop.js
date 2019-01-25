@@ -34,15 +34,21 @@ class ButtonTop extends Component {
   }
 
   componentDidMount() {
+    this._ismounted = true;
     window.addEventListener("scroll", () => this.handleScroll());
   }
 
+  componentWillUnmount() {
+    this._ismounted = false;
+  }
+
   handleScroll(event) {
-    if (this.state.visible && window.scrollY === 0) {
-      this.setState({ visible: false });
-    } else if (!this.state.visible && window.scrollY > 0) {
-      this.setState({ visible: true });
-    }
+    if (this._ismounted)
+      if (this.state.visible && window.scrollY === 0) {
+        this.setState({ visible: false });
+      } else if (!this.state.visible && window.scrollY > 0) {
+        this.setState({ visible: true });
+      }
   }
 
   render() {
@@ -54,7 +60,6 @@ class ButtonTop extends Component {
           icon
           labelPosition="left"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          visible={visible}
         >
           <Icon name="arrow circle up" />
           SUBIR

@@ -88,10 +88,13 @@ export default withRouter(
               Noticias
             </Menu.Item>
             <Menu.Item
-              as={NavLink}
-              to={`${ruta}#contacto`}
-              smooth
-              onClick={() => this.setState({ sidebarOpened: false })}
+              onClick={() => {
+                this.setState({ sidebarOpened: false });
+                window.scrollTo({
+                  top: document.body.scrollHeight,
+                  behavior: "smooth",
+                });
+              }}
             >
               Contacto
             </Menu.Item>
