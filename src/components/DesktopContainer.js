@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { NavHashLink as NavLink } from "react-router-hash-link";
 import { Container, Menu, Responsive } from "semantic-ui-react";
 import logo_small from "../dist/images/logo-small.png";
 import { getWidth } from "../utils";
@@ -46,7 +45,7 @@ export default withRouter(
               <Menu.Item>
                 <img src={logo_small} size="mini" />
               </Menu.Item>
-              <Menu.Item header smooth as={Link} to={"/"} active={ruta === "/"}>
+              <Menu.Item header as={Link} to={"/"} active={ruta === "/"}>
                 Inicio
               </Menu.Item>
               <Menu.Item
@@ -74,7 +73,15 @@ export default withRouter(
               >
                 Noticias
               </Menu.Item>
-              <Menu.Item header smooth as={NavLink} to={`${ruta}#contacto`}>
+              <Menu.Item
+                header
+                onClick={() => {
+                  window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: "smooth",
+                  });
+                }}
+              >
                 Contacto
               </Menu.Item>
               <Menu.Item position="right" />
