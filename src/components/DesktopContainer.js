@@ -46,13 +46,7 @@ export default withRouter(
               <Menu.Item>
                 <img src={logo_small} size="mini" />
               </Menu.Item>
-              <Menu.Item
-                header
-                smooth
-                as={NavLink}
-                to={"/#home"}
-                active={ruta === "/"}
-              >
+              <Menu.Item header smooth as={Link} to={"/"} active={ruta === "/"}>
                 Inicio
               </Menu.Item>
               <Menu.Item

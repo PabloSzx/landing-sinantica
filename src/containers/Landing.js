@@ -26,12 +26,7 @@ class HomepageLayout extends Component {
     const { activeIndex } = this.state;
     return (
       <Fragment>
-        <Segment
-          textAlign="center"
-          style={{ padding: "0.1em 0em" }}
-          vertical
-          id="home"
-        >
+        <Segment textAlign="center" style={{ padding: "0.1em 0em" }} vertical>
           <HomepageHeading />
         </Segment>
         <Segment style={{ padding: "8em 0em" }} vertical>

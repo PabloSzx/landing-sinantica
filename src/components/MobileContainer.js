@@ -56,7 +56,7 @@ export default withRouter(
           >
             <Menu.Item
               as={NavLink}
-              to={"/#home"}
+              to={"/"}
               smooth
               active={ruta === "/"}
               onClick={() => this.setState({ sidebarOpened: false })}

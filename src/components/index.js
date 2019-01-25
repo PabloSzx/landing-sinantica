@@ -1,4 +1,5 @@
 import DesktopContainer from "./DesktopContainer";
+import Footer from "./footer";
 import HomepageHeading from "./HomepageHeading";
 import Footer from "./footer";
 import ButtonTop from "./ButtonTop";
@@ -7,7 +8,7 @@ import Report from "./Report";
 import ResponsiveContainer from "./ResponsiveContainer";
 import SampleImage from "./SampleImage";
 import ScrollImage from "./ScrollImage";
-
+import ScrollToTop from "./ScrollToTop";
 export {
   DesktopContainer,
   MobileContainer,
@@ -18,4 +19,5 @@ export {
   Report,
   Footer,
   ButtonTop
+  ScrollToTop,
 };
