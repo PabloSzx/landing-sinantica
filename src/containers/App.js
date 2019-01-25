@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { ResponsiveContainer, ScrollToTop } from "../components";
-import { Landing, News, AboutUs, Investigation, ArticleExample } from "./";
+import { Landing, News, AboutUs, ArticleExample } from "./";
 
 class Who extends Component {
   render() {
