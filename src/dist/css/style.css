@@ -14,3 +14,9 @@
 .title-notice {
   font-family: "Playfair Display", sans-serif !important;
 }
+.react-player {
+  position: absolute;
+  width: 120%;
+  top: -11%;
+  left: 0%;
+}

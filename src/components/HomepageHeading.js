@@ -1,9 +1,25 @@
 import React, { Component } from "react";
+
 import posed from "react-pose";
 import { Header } from "semantic-ui-react";
-import sample from "../dist/images/google.png";
-
+import video from "../dist/videos/video-1548441554.mp4";
+//import sample from "../dist/images/google.png";
 const Img = posed.img({
+  nada: {
+    filter: "blur(0px)",
+    transition: {
+      duration: 350,
+    },
+  },
+  harto: {
+    filter: "blur(3px)",
+    transition: {
+      duration: 1500,
+    },
+  },
+});
+
+const VIDEO = posed.video({
   nada: {
     filter: "blur(0px)",
     transition: {
@@ -60,19 +76,39 @@ class HomepageHeading extends Component {
           });
         }}
       >
-        <Img
-          src={sample}
+        <VIDEO
+          src={video}
           initialPose={initialPose}
           pose={pose}
-          style={{
-            zIndex: "-1",
-            position: "absolute",
-            top: "0px",
-            left: "0px",
-            height: "100vh",
-            marginTop: 0,
-          }}
+          muted={true}
+          autoPlay={true}
+          loop={true}
+          style={{ width: "100vw", height: "100vh", zIndex: "-1" }}
         />
+        {/*
+          <ReactPlayer
+            url={video}
+            muted
+            loop
+            playing
+            className="react-player"
+            width="100vw"
+            height="150vh"
+        />*/}
+        {/*
+          <Img
+            src={sample}
+            initialPose={initialPose}
+            pose={pose}
+            style={{
+              zIndex: "-1",
+              position: "absolute",
+              top: "0px",
+              left: "0px",
+              height: "100vh",
+              marginTop: 0,
+            }}
+          />*/}
         <Header
           className="title-font"
           as="h1"
@@ -86,7 +122,6 @@ class HomepageHeading extends Component {
             paddingTop: "2.5em",
           }}
         />
-
         <Header
           as="h2"
           content="Somos Sinántica. Hacemos cosas sorprendentes."
