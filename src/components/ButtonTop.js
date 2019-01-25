@@ -1,19 +1,61 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import posed from "react-pose";
 import { Icon, Button } from "semantic-ui-react";
+import styled from "styled-components";
 
-const BoxButton = styled.div`
+const posedButton = posed.div({
+  visible: {
+    opacity: 1,
+    applyAtStart: {
+      display: "block",
+    },
+  },
+  hidden: {
+    opacity: 0,
+    applyAtEnd: {
+      display: "none",
+    },
+  },
+});
+
+const BoxButton = styled(posedButton)`
   position: fixed;
   bottom: 0;
   right: 0;
   width: 15vw;
 `;
-
 class ButtonTop extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      visible: true,
+    };
+  }
+
+  componentDidMount() {
+    window.addEventListener("scroll", () => this.handleScroll());
+  }
+
+  handleScroll(event) {
+    if (this.state.visible && window.scrollY === 0) {
+      this.setState({ visible: false });
+    } else if (!this.state.visible && window.scrollY > 0) {
+      this.setState({ visible: true });
+    }
+  }
+
   render() {
+    const { visible } = this.state;
     return (
-      <BoxButton>
-        <Button size="large" icon labelPosition="left">
+      <BoxButton pose={visible ? "visible" : "hidden"}>
+        <Button
+          size="large"
+          icon
+          labelPosition="left"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          visible={visible}
+        >
           <Icon name="arrow circle up" />
           SUBIR
         </Button>
