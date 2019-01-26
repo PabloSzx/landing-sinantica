@@ -21,16 +21,20 @@ const posedButton = posed.div({
 const BoxButton = styled(posedButton)`
   position: fixed;
   bottom: 0;
-  right: 0;
+  right: 0rem;
   width: 15vw;
   z-index: 5;
+  @media (max-width: 800px) {
+    position: absolute;
+    right: 8em;
+  }
 `;
 class ButtonTop extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      visible: false,
+      visible: true,
     };
   }
 

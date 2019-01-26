@@ -6,24 +6,33 @@ import {
   Header,
   Icon,
   Segment,
-  Image
+  Image,
 } from "semantic-ui-react";
+import styled from "styled-components";
 import { HomepageHeading, ScrollImage, Footer, ButtonTop } from "../components";
 import fci from "../dist/images/logo-facultad.png";
 import innoving from "../dist/images/logo-innoving.jpg";
 import leufulab from "../dist/images/logo-leufulab.png";
 import smu from "../dist/images/smu-logo.png";
 
+const HEADER = styled(Header)`
+  font-size: 5em;
+  @media (max-width: 400px) {
+    font-size: 3.5em;
+  }
+`;
+
 class HomepageLayout extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      activeIndex: 0
+      activeIndex: 0,
     };
   }
   render() {
     const { activeIndex } = this.state;
+
     return (
       <Fragment>
         <Segment textAlign="center" style={{ padding: "0.1em 0em" }} vertical>
@@ -31,9 +40,9 @@ class HomepageLayout extends Component {
         </Segment>
         <Segment style={{ padding: "8em 0em" }} vertical>
           <Container text>
-            <Header as="h3" className="title-font" style={{ fontSize: "5em" }}>
+            <HEADER as="h3" className="title-font">
               Quienes Somos
-            </Header>
+            </HEADER>
             <p style={{ fontSize: "1.33em" }}>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
@@ -50,9 +59,9 @@ class HomepageLayout extends Component {
         </Segment>
         <Segment style={{ padding: "8em 0em" }} vertical>
           <Container text>
-            <Header as="h3" className="title-font" style={{ fontSize: "5em" }}>
+            <HEADER as="h3" className="title-font">
               Que Hacemos
-            </Header>
+            </HEADER>
             <p style={{ fontSize: "1.33em" }}>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa strong. Cum sociis natoque
@@ -71,7 +80,11 @@ class HomepageLayout extends Component {
                 <Header.Content>TRABAJAMOS CON</Header.Content>
               </Header>
             </Grid.Row>
-            <Grid.Row centered columns={8}>
+            <Grid.Row
+              centered
+              columns={window.innerWidth < 600 ? 2 : 8}
+              style={{ padding: window.innerWidth < 600 ? "1em" : "auto" }}
+            >
               <Grid.Column>
                 <Image src={smu} />
               </Grid.Column>
@@ -91,7 +104,11 @@ class HomepageLayout extends Component {
               </Header>
             </Grid.Row>
 
-            <Grid.Row centered columns={8}>
+            <Grid.Row
+              centered
+              columns={window.innerWidth < 600 ? 2 : 8}
+              style={{ padding: window.innerWidth < 600 ? "1em" : "auto" }}
+            >
               <Grid.Column>
                 <Image src={fci} />
               </Grid.Column>

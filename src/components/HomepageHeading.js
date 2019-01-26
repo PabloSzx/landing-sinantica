@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-
 import posed from "react-pose";
 import { Header } from "semantic-ui-react";
+import styled from "styled-components";
 import video from "../dist/videos/video-1548441554.mp4";
 //import sample from "../dist/images/google.png";
 const Img = posed.img({
@@ -18,6 +18,19 @@ const Img = posed.img({
     },
   },
 });
+
+const HEADER = styled(Header)`
+  position: relative;
+  font-size: 8em;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 2.5em;
+  z-index: 100;
+  @media (max-width: 1000px) {
+    font-size: 5em;
+  }
+`;
 
 const VIDEO = posed.video({
   nada: {
@@ -116,19 +129,9 @@ class HomepageHeading extends Component {
               marginTop: 0,
             }}
           />*/}
-        <Header
-          className="title-font"
-          as="h1"
-          content="Sinantica"
-          style={{
-            position: "relative",
-            fontSize: "8em",
-            fontWeight: "normal",
-            marginBottom: 0,
-            marginTop: 0,
-            paddingTop: "2.5em",
-          }}
-        />
+        <HEADER className="title-font" as="h1">
+          Sinantica
+        </HEADER>
         <Header
           as="h2"
           content="Somos Sinántica. Hacemos cosas sorprendentes."
