@@ -27,6 +27,11 @@ const P = styled.p`
   color: black;
   max-width: 62vw;
 `;
+const Bar = styled.div`
+  background-color: gray;
+  margin-left: 2vw;
+  max-width: 0.5vw;
+`;
 
 export default class ArticleExample extends Component {
   render() {
@@ -95,7 +100,36 @@ export default class ArticleExample extends Component {
               vitae, vestibulum id diam. Sed et lacus fringilla, mollis ligula
               nec, scelerisque lectus.
             </P>
-            CITA
+            <Bar>
+              <P
+                style={{
+                  width: "60vw",
+                  marginLeft: "1.5vw",
+                  fontStyle: "italic"
+                }}
+              >
+                "Nulla auctor turpis in augue maximus vulputate. Suspendisse
+                lectus orci, porta vitae bibendum vitae, pretium id nulla.
+                Pellentesque id molestie enim. Nunc id enim vitae ante blandit
+                pretium quis a nunc. Phasellus rutrum elit vitae tortor vehicula
+                sollicitudin. Sed dictum odio id nunc efficitur semper vitae sed
+                mi. "
+              </P>
+              <P
+                style={{
+                  width: "60vw",
+                  marginLeft: "1.5vw",
+                  fontStyle: "italic"
+                }}
+              >
+                "Nulla auctor turpis in augue maximus vulputate. Suspendisse
+                lectus orci, porta vitae bibendum vitae, pretium id nulla.
+                Pellentesque id molestie enim. Nunc id enim vitae ante blandit
+                pretium quis a nunc. Phasellus rutrum elit vitae tortor vehicula
+                sollicitudin. Sed dictum odio id nunc efficitur semper vitae sed
+                mi. "
+              </P>
+            </Bar>
             <P>
               Nulla auctor turpis in augue maximus vulputate. Suspendisse lectus
               orci, porta vitae bibendum vitae, pretium id nulla. Pellentesque
