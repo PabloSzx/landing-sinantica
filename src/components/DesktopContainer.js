@@ -11,7 +11,7 @@ export default withRouter(
 
       this.state = {
         fixed: false,
-        ruta: "/",
+        ruta: props.location.pathname,
       };
     }
 

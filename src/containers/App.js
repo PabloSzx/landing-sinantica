@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { ResponsiveContainer, ScrollToTop } from "../components";
-import { Landing, News, AboutUs, ArticleExample } from "./";
+import { Landing, News, AboutUs, ArticleExample, Investigation } from "./";
 
 class Who extends Component {
   render() {
@@ -18,9 +18,10 @@ export default class App extends Component {
             <ScrollToTop>
               <Route exact path="/" component={Landing} />
               <Route exact path="/quienes_somos" component={AboutUs} />
-              <Route exact path="/investigacion" component={ArticleExample} />
+              <Route exact path="/noticias/:id" component={ArticleExample} />
               <Route exact path="/noticias" component={News} />
               <Route exact path="/contacto" component={Who} />
+              <Route exact path="/investigacion" component={Investigation} />
             </ScrollToTop>
           </ResponsiveContainer>
         </Switch>

@@ -30,7 +30,7 @@ class ButtonTop extends Component {
     super(props);
 
     this.state = {
-      visible: true,
+      visible: false,
     };
   }
 

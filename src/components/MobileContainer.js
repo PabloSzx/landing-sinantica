@@ -18,7 +18,7 @@ export default withRouter(
 
       this.state = {
         sidebarOpened: false,
-        ruta: "/",
+        ruta: props.location.pathname,
       };
     }
 
