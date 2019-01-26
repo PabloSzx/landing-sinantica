@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from "react";
-import styled from "styled-components";
 import { Segment } from "semantic-ui-react";
+import styled from "styled-components";
+import { Footer } from "../components";
 import sample from "../dist/images/google.png";
-import { Footer, ButtonTop } from "../components";
 const DIV = styled.div`
   position: relative;
   background-color: white;
@@ -46,7 +46,7 @@ export default class Investigation extends Component {
               height: "100vh",
               position: "relative",
               top: "0px",
-              marginTop: 0
+              marginTop: 0,
             }}
           >
             <DIV>
@@ -68,12 +68,12 @@ export default class Investigation extends Component {
                 top: "0px",
                 left: "0px",
                 height: "100vh",
-                marginTop: 0
+                marginTop: 0,
               }}
             />
           </div>
         </Segment>
-        <ButtonTop />
+
         <Footer />
       </Fragment>
     );

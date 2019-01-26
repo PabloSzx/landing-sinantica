@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
-import styled from "styled-components";
 import { Container, Segment } from "semantic-ui-react";
+import styled from "styled-components";
+import { Footer } from "../components";
 import sample from "../dist/images/google.png";
 import example from "../dist/images/sample.png";
-import { Footer, ButtonTop } from "../components";
 const DIV = styled.div`
   position: relative;
   background-color: white;
@@ -65,7 +65,7 @@ export default class AboutUs extends Component {
               height: "100vh",
               position: "relative",
               top: "0px",
-              marginTop: 0
+              marginTop: 0,
             }}
           >
             <DIV>
@@ -87,7 +87,7 @@ export default class AboutUs extends Component {
                 top: "0px",
                 left: "0px",
                 height: "100vh",
-                marginTop: 0
+                marginTop: 0,
               }}
             />
           </div>
@@ -101,7 +101,7 @@ export default class AboutUs extends Component {
               zIndex: "-1",
               position: "relative",
               width: "48.9vw",
-              marginTop: 0
+              marginTop: 0,
             }}
           />
           <img
@@ -111,7 +111,7 @@ export default class AboutUs extends Component {
               position: "relative",
               float: "right",
               width: "48.9vw",
-              marginTop: 0
+              marginTop: 0,
             }}
           />
 
@@ -160,7 +160,7 @@ export default class AboutUs extends Component {
               width: "100vw",
               objectFit: "cover",
               maxHeight: "50vh",
-              marginTop: 0
+              marginTop: 0,
             }}
           />
           <DIVImage>
@@ -185,7 +185,7 @@ export default class AboutUs extends Component {
               width: "32.9vw",
               float: "left",
               height: "70vh",
-              marginTop: 0
+              marginTop: 0,
             }}
           />
           <img
@@ -197,7 +197,7 @@ export default class AboutUs extends Component {
               float: "right",
               width: "32.9vw",
               height: "70vh",
-              marginTop: 0
+              marginTop: 0,
             }}
           />
           <img
@@ -211,7 +211,7 @@ export default class AboutUs extends Component {
               marginRight: "auto",
               width: "32.5vw",
               height: "70vh",
-              marginTop: 0
+              marginTop: 0,
             }}
           />
 
@@ -246,7 +246,6 @@ export default class AboutUs extends Component {
             </p>
           </Container>
         </Segment>
-        <ButtonTop />
         <Footer />
       </Fragment>
     );

@@ -21,11 +21,10 @@ const posedButton = posed.div({
 const BoxButton = styled(posedButton)`
   position: fixed;
   bottom: 0;
-  right: 0rem;
+  right: 0em;
   width: 15vw;
   z-index: 5;
-  @media (max-width: 800px) {
-    position: absolute;
+  @media (max-width: 1000px) {
     right: 8em;
   }
 `;
@@ -34,7 +33,7 @@ class ButtonTop extends Component {
     super(props);
 
     this.state = {
-      visible: true,
+      visible: false,
     };
   }
 
@@ -58,6 +57,7 @@ class ButtonTop extends Component {
 
   render() {
     const { visible } = this.state;
+
     return (
       <BoxButton pose={visible ? "visible" : "hidden"}>
         <Button

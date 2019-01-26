@@ -4,7 +4,7 @@ import React, { Component, Fragment } from "react";
 import { Link } from "react-router-dom";
 import { Segment, Header, Grid, Item, Divider, Icon } from "semantic-ui-react";
 import styled from "styled-components";
-import { Footer, ButtonTop } from "../components";
+import { Footer } from "../components";
 import sample from "../dist/images/google.png";
 
 const DIV = styled.div`
@@ -168,7 +168,7 @@ export default class Investigation extends Component {
             }
           </Grid>
         </Segment>
-        <ButtonTop />
+
         <Footer />
       </Fragment>
     );

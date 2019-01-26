@@ -9,7 +9,7 @@ import {
   Image,
 } from "semantic-ui-react";
 import styled from "styled-components";
-import { HomepageHeading, ScrollImage, Footer, ButtonTop } from "../components";
+import { HomepageHeading, ScrollImage, Footer } from "../components";
 import fci from "../dist/images/logo-facultad.png";
 import innoving from "../dist/images/logo-innoving.jpg";
 import leufulab from "../dist/images/logo-leufulab.png";
@@ -128,7 +128,7 @@ class HomepageLayout extends Component {
             </Grid.Row>
           </Grid>
         </Segment>
-        <ButtonTop />
+
         <Footer />
       </Fragment>
     );

@@ -5,7 +5,7 @@ import Markdown from "react-remarkable";
 import { withRouter } from "react-router-dom";
 import { Segment } from "semantic-ui-react";
 import styled from "styled-components";
-import { Footer, ButtonTop } from "../components";
+import { Footer } from "../components";
 import sample from "../dist/images/google.png";
 const StyledSegment = styled(Segment)`
   background-color: #f2f2f2 !important;
@@ -108,7 +108,7 @@ export default withRouter(
               </MARKDOWN>
             </Segment>
           </StyledSegment>
-          <ButtonTop />
+
           <Footer />
         </Fragment>
       );
