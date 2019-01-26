@@ -23,6 +23,7 @@ const BoxButton = styled(posedButton)`
   bottom: 0;
   right: 0;
   width: 15vw;
+  z-index: 5;
 `;
 class ButtonTop extends Component {
   constructor(props) {
