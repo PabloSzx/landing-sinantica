@@ -1,6 +1,6 @@
 import React from "react";
 import posed, { PoseGroup } from "react-pose";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
 import { ResponsiveContainer, ScrollToTop } from "../components";
 import { Landing, News, AboutUs, ArticleExample, Investigation } from "./";
 
@@ -11,13 +11,7 @@ const RouteContainer = posed.div({
 
 class App extends Route {
   render() {
-    const {
-      context: {
-        router: {
-          route: { location },
-        },
-      },
-    } = this;
+    const { location } = this.props;
     return (
       <ResponsiveContainer>
         <PoseGroup>
@@ -54,8 +48,4 @@ class App extends Route {
   }
 }
 
-export default () => (
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-);
+export default withRouter(App);

@@ -1,7 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import { App } from "./containers";
-import "semantic-ui-css/semantic.min.css";
 import "./dist/css/style.css";
+import "semantic-ui-css/semantic.min.css";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
