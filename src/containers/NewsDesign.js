@@ -19,7 +19,7 @@ const LINK = styled(Link)`
   color: black;
   font-size: 1.8em;
   &:hover {
-    font-size: 2em;
+    font-size: 1.85em;
     transition: font-size 0.4s;
   }
   @media (max-width: 1100px) {
@@ -36,7 +36,7 @@ export default class Investigation extends Component {
     super(props);
 
     this.state = {
-      news: [],
+      news: []
     };
   }
 
@@ -44,7 +44,7 @@ export default class Investigation extends Component {
     const news = await axios.get("/blog");
 
     this.setState({
-      news: news.data,
+      news: news.data
     });
   }
 
@@ -66,7 +66,7 @@ export default class Investigation extends Component {
           style={{
             backgroundColor: "#f2f2f2",
             paddingLeft: "10vw",
-            paddingRight: "10vw",
+            paddingRight: "10vw"
           }}
           vertical
         >
@@ -89,17 +89,12 @@ export default class Investigation extends Component {
                               as="h1"
                               style={{
                                 display: "inline",
-                                fontSize: "2em",
+                                fontSize: "2em"
                               }}
                             >
                               <LINK
                                 to={`/noticias/${key}`}
-                                style={{
-                                  color: "black",
-                                  hover: {
-                                    opacity: 0,
-                                  },
-                                }}
+                                className="title-font"
                               >
                                 {value.title}
                               </LINK>
@@ -109,7 +104,7 @@ export default class Investigation extends Component {
                                 textAlign: "right",
                                 position: "absolute",
                                 bottom: "0.2em",
-                                right: 0,
+                                right: 0
                               }}
                             >
                               <Icon
@@ -162,7 +157,7 @@ export default class Investigation extends Component {
                 },
                 {
                   acum: [],
-                  newsAcum: [],
+                  newsAcum: []
                 }
               ).acum
             }
