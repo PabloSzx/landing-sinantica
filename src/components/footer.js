@@ -17,7 +17,7 @@ class Footer extends Component {
           <Grid divided stackable centered>
             <Grid.Row>
               <Grid.Column width={4}>
-                <img src={logo_big} />
+                <img src={logo_big} alt="logo big" />
               </Grid.Column>
               <Grid.Column width={4}>
                 <Header as="h4" className="title-font" content="Contacto" />

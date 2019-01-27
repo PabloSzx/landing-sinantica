@@ -76,7 +76,7 @@ export default class Investigation extends Component {
                 _.map(news, (value, key) => {
                   return (
                     <Grid.Column>
-                      <img src={sample /* value.urlImage */} />
+                      <img src={sample /* value.urlImage */} alt="article" />
                       <DIV>
                         <Item>
                           <Item.Content>
@@ -128,6 +128,7 @@ export default class Investigation extends Component {
                   switch (key % 3) {
                     case 0:
                       acum.newsAcum = [];
+                    // eslint-disable-next-line no-fallthrough
                     case 1:
                       acum.newsAcum.push(value);
                       if (key + 1 === news.length) {

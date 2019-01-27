@@ -46,7 +46,7 @@ export default class Investigation extends Component {
               height: "100vh",
               position: "relative",
               top: "0px",
-              marginTop: 0,
+              marginTop: 0
             }}
           >
             <DIV>
@@ -62,13 +62,14 @@ export default class Investigation extends Component {
             </DIV>
             <img
               src={sample}
+              alt="investigation cover"
               style={{
                 zIndex: "-1",
                 position: "absolute",
                 top: "0px",
                 left: "0px",
                 height: "100vh",
-                marginTop: 0,
+                marginTop: 0
               }}
             />
           </div>

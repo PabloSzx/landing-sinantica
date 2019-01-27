@@ -11,7 +11,7 @@ export default withRouter(
 
       this.state = {
         fixed: false,
-        ruta: props.location.pathname,
+        ruta: props.location.pathname
       };
     }
 
@@ -21,7 +21,7 @@ export default withRouter(
     componentDidUpdate(prevProps, prevState) {
       if (prevProps.location.pathname !== this.props.location.pathname) {
         this.setState({
-          ruta: this.props.location.pathname,
+          ruta: this.props.location.pathname
         });
       }
     }
@@ -43,7 +43,7 @@ export default withRouter(
           >
             <Container>
               <Menu.Item>
-                <img src={logo_small} size="mini" />
+                <img src={logo_small} size="mini" alt="description" />
               </Menu.Item>
               <Menu.Item header as={Link} to={"/"} active={ruta === "/"}>
                 Inicio
@@ -78,7 +78,7 @@ export default withRouter(
                 onClick={() => {
                   window.scrollTo({
                     top: document.body.scrollHeight,
-                    behavior: "smooth",
+                    behavior: "smooth"
                   });
                 }}
               >

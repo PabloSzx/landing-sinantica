@@ -46,7 +46,7 @@ export default withRouter(
 
       this.state = {
         //noticias/
-        news: [],
+        news: []
       };
     }
 
@@ -54,7 +54,7 @@ export default withRouter(
       const news = await axios.get("/blog");
       console.log("news", news);
       this.setState({
-        news: news.data,
+        news: news.data
       });
     }
 
@@ -67,15 +67,15 @@ export default withRouter(
           timestamp: "xd",
           urlImage: "xd",
           author: "xd",
-          markdown: "",
+          markdown: ""
         }
       );
       const {
         title,
-        timestamp = new Date(),
+        /*timestamp = new Date(),*/
         urlImage = sample,
         author = "xd",
-        markdown,
+        markdown
       } = article;
       return (
         <Fragment>
@@ -89,7 +89,7 @@ export default withRouter(
             <Segment
               style={{
                 backgroundColor: "white",
-                paddingTop: "5vh",
+                paddingTop: "5vh"
               }}
               vertical
             >
@@ -98,6 +98,7 @@ export default withRouter(
                 {/*Calcula tiempo desde ahora a value.timestamp */}
               </Title>
               <img
+                alt="article"
                 src={urlImage}
                 style={{ maxWidth: "62vw", paddingLeft: "1.5vw" }}
               />

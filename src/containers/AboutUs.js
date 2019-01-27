@@ -65,7 +65,7 @@ export default class AboutUs extends Component {
               height: "100vh",
               position: "relative",
               top: "0px",
-              marginTop: 0,
+              marginTop: 0
             }}
           >
             <DIV>
@@ -80,6 +80,7 @@ export default class AboutUs extends Component {
               </P>
             </DIV>
             <img
+              alt="about us cover"
               src={sample}
               style={{
                 zIndex: "-1",
@@ -87,7 +88,7 @@ export default class AboutUs extends Component {
                 top: "0px",
                 left: "0px",
                 height: "100vh",
-                marginTop: 0,
+                marginTop: 0
               }}
             />
           </div>
@@ -97,21 +98,23 @@ export default class AboutUs extends Component {
         <Segment style={{ padding: "0em 0em" }} vertical>
           <img
             src={example}
+            alt="background left"
             style={{
               zIndex: "-1",
               position: "relative",
               width: "48.9vw",
-              marginTop: 0,
+              marginTop: 0
             }}
           />
           <img
             src={example}
+            alt="nackground right"
             style={{
               zIndex: "-1",
               position: "relative",
               float: "right",
               width: "48.9vw",
-              marginTop: 0,
+              marginTop: 0
             }}
           />
 
@@ -154,13 +157,14 @@ export default class AboutUs extends Component {
         <Segment style={{ padding: "0em 0em" }} vertical>
           <img
             src={example}
+            alt="background"
             style={{
               zIndex: "-1",
               position: "relative",
               width: "100vw",
               objectFit: "cover",
               maxHeight: "50vh",
-              marginTop: 0,
+              marginTop: 0
             }}
           />
           <DIVImage>
@@ -178,6 +182,7 @@ export default class AboutUs extends Component {
         <Segment style={{ padding: "0em 0em" }} vertical>
           <img
             src={example}
+            alt="background left"
             style={{
               zIndex: "-1",
               position: "relative",
@@ -185,11 +190,12 @@ export default class AboutUs extends Component {
               width: "32.9vw",
               float: "left",
               height: "70vh",
-              marginTop: 0,
+              marginTop: 0
             }}
           />
           <img
             src={example}
+            alt="background center"
             style={{
               zIndex: "-1",
               position: "relative",
@@ -197,11 +203,12 @@ export default class AboutUs extends Component {
               float: "right",
               width: "32.9vw",
               height: "70vh",
-              marginTop: 0,
+              marginTop: 0
             }}
           />
           <img
             src={example}
+            alt="background right"
             style={{
               zIndex: "-1",
 
@@ -211,7 +218,7 @@ export default class AboutUs extends Component {
               marginRight: "auto",
               width: "32.5vw",
               height: "70vh",
-              marginTop: 0,
+              marginTop: 0
             }}
           />
 

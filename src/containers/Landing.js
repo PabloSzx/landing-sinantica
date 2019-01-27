@@ -23,15 +23,9 @@ const HEADER = styled(Header)`
 `;
 
 class HomepageLayout extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      activeIndex: 0,
-    };
-  }
+  
   render() {
-    const { activeIndex } = this.state;
+    
 
     return (
       <Fragment>

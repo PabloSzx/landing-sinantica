@@ -4,7 +4,7 @@ import { Header } from "semantic-ui-react";
 import styled from "styled-components";
 import video from "../dist/videos/video-1548441554.mp4";
 //import sample from "../dist/images/google.png";
-const Img = posed.img({
+/*const Img = posed.img({
   nada: {
     filter: "blur(0px)",
     transition: {
@@ -17,7 +17,7 @@ const Img = posed.img({
       duration: 1500,
     },
   },
-});
+});*/
 
 const HEADER = styled(Header)`
   position: relative;
@@ -36,15 +36,15 @@ const VIDEO = posed.video({
   nada: {
     filter: "blur(0px)",
     transition: {
-      duration: 350,
-    },
+      duration: 350
+    }
   },
   harto: {
     filter: "blur(3px)",
     transition: {
-      duration: 1500,
-    },
-  },
+      duration: 1500
+    }
+  }
 });
 class HomepageHeading extends Component {
   constructor(props) {
@@ -52,7 +52,7 @@ class HomepageHeading extends Component {
 
     this.state = {
       initialPose: "nada",
-      pose: "harto",
+      pose: "harto"
     };
   }
 
@@ -65,7 +65,7 @@ class HomepageHeading extends Component {
           height: "100vh",
           position: "relative",
           top: "0px",
-          marginTop: 0,
+          marginTop: 0
         }}
         ref={e => {
           this.div = e;
@@ -73,19 +73,19 @@ class HomepageHeading extends Component {
         onMouseEnter={e => {
           this.setState({
             initialPose: "harto",
-            pose: "nada",
+            pose: "nada"
           });
         }}
         onMouseMove={e => {
           this.setState({
             initialPose: "harto",
-            pose: "nada",
+            pose: "nada"
           });
         }}
         onMouseOut={e => {
           this.setState({
             initialPose: "nada",
-            pose: "harto",
+            pose: "harto"
           });
         }}
       >
@@ -102,7 +102,7 @@ class HomepageHeading extends Component {
             zIndex: "-2",
             left: 0,
             top: 0,
-            position: "absolute",
+            position: "absolute"
           }}
         />
         {/*
@@ -139,7 +139,7 @@ class HomepageHeading extends Component {
             position: "relative",
             fontSize: "1.5em",
             fontWeight: "normal",
-            marginTop: "1.5em",
+            marginTop: "1.5em"
           }}
         />
       </div>

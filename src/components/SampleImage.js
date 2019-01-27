@@ -1,21 +1,5 @@
 import React, { Component } from "react";
-import {
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  List,
-  Menu,
-  Responsive,
-  Segment,
-  Sidebar,
-  Visibility,
-  Tab,
-  Image,
-  Dropdown
-} from "semantic-ui-react";
+import { Image } from "semantic-ui-react";
 
 import sample from "../dist/images/sample.png";
 
