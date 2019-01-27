@@ -1,6 +1,6 @@
 import ButtonTop from "./ButtonTop";
 import DesktopContainer from "./DesktopContainer";
-import Footer from "./footer";
+import Footer from "./Footer";
 import HomepageHeading from "./HomepageHeading";
 import MobileContainer from "./MobileContainer";
 import Report from "./Report";
